@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+	<script src="/bundles/latitude/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+	<script src="/bundles/latitude/bower_components/jquery/dist/jquery.min.js"></script>
+
+	<link rel="import" href="/bundles/latitude/bower_components/polymer/polymer.html">
+	<link rel="import" href="/bundles/latitude/bower_components/paper-input/paper-input.html">
+	<link rel="import" href="/bundles/latitude/bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+	<link rel="import" href="/bundles/latitude/bower_components/paper-menu/paper-menu.html">
+	<link rel="import" href="/bundles/latitude/bower_components/paper-item/paper-item.html">
+	<link rel="import" href="/bundles/latitude/bower_components/paper-button/paper-button.html">
+	<link rel="import" href="/bundles/latitude/bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+</head>
+
+<body>
+<div class="horizontal layout">
+	<paper-input class="flex" id="ssbm-bracket-title" label="Bracket Title"></paper-input>
+</div>
+<div class="horizontal layout">
+	<paper-input class="flex" id="ssbm-bracket-link" label="Challonge link"></paper-input>
+</div>
+
+<div class="horizontal layout">
+	<paper-button raised class="ssbm-bracket-get-challonge flex">Pull from Challonge</paper-button>
+</div>
+<hr>
+<div class="horizontal layout">
+	<paper-button raised class="flex" nodecg-dialog="manual-update">Manual Update</paper-button>
+</div>
+<script src="js/bracket.js"></script>
+</body>

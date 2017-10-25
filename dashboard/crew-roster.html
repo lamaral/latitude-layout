@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+	<script src="/bundles/latitude/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+	<script src="/bundles/latitude/bower_components/jquery/dist/jquery.min.js"></script>
+
+	<link rel="import" href="/bundles/latitude/bower_components/polymer/polymer.html">
+	<link rel="import" href="/bundles/latitude/bower_components/paper-input/paper-input.html">
+	<link rel="import" href="/bundles/latitude/bower_components/paper-checkbox/paper-checkbox.html">
+	<link rel="import" href="/bundles/latitude/bower_components/paper-button/paper-button.html">
+	<link rel="import" href="/bundles/latitude/bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+</head>
+<body>
+<style>
+paper-button.indigo {
+    background-color: #2D4E8A;
+    color: white;
+}
+</style>
+
+<dom-module name="crew-score" attributes="number">
+	<template>
+		<div class="flex">
+			<div class="horizontal layout">
+				<paper-input class="flex-2" style="padding-right:2px" label="Crew {{number}} Name" value="{{name}}"></paper-input>
+				<paper-input class="flex" style="padding-left:2px" type="number" label="Crew {{number}} Score" value="{{score}}"></paper-input>
+			</div>
+		</div>
+	</template>
+	<script>
+	window.addEventListener('WebComponentsReady', function(e) {
+		Polymer({
+			is: 'crew-score',
+			ready: function() {
+				this.score = 0;
+			},
+			getName: function() {
+				return this.name;
+			},
+			getScore: function() {
+				return this.score;
+			}
+		});
+	});
+	</script>
+</dom-module>
+
+<dom-module name="crew-member" attribute="number">
+	<template>
+		<div class="flex">
+			<div class="horizontal layout">
+				<paper-input class="flex-2" style="padding-right:2px" label="Player {{number}}" value="{{tag}}"></paper-input>
+				<paper-checkbox checked="{{ko}}" style="transform: translateY(25%); margin-left:5px"></paper-checkbox>
+			</div>
+		</div>
+	</template>
+	<script>
+	window.addEventListener('WebComponentsReady', function(e) {
+		Polymer({
+			is:'crew-member',
+			ready: function() {
+				this.ko = false;
+			},
+			getTag: function() {
+				return this.tag;
+			},
+			getKO: function() {
+				return this.ko;
+			}
+		});
+	});
+	</script>
+</dom-module>
+
+
+<div class="horizontal layout">
+	<crew-score number="1" style="padding-right:5px"></crew-score>
+	<crew-score number="2"></crew-score>
+</div>
+<hr>
+<div class="horizontal layout">
+	<div class="flex" id="roster1" style="margin-right: 5px">
+		<div class="horizontal layout">
+			<p class="flex-8" style="margin:0"></p>
+			<p class="flex" style="margin:0">KO?</p>
+		</div>
+		<crew-member number="1"></crew-member>
+		<crew-member number="2"></crew-member>
+		<crew-member number="3"></crew-member>
+		<crew-member number="4"></crew-member>
+		<crew-member number="5"></crew-member>
+		<crew-member number="6"></crew-member>
+		<crew-member number="7"></crew-member>
+		<crew-member number="8"></crew-member>
+		<crew-member number="9"></crew-member>
+		<crew-member number="10"></crew-member>
+	</div>
+	<div class="flex" id="roster2" style="margin-left: 5px">
+		<div class="horizontal layout">
+			<p class="flex-8" style="margin:0"></p>
+			<p class="flex" style="margin:0">KO?</p>
+		</div>
+		<crew-member number="1"></crew-member>
+		<crew-member number="2"></crew-member>
+		<crew-member number="3"></crew-member>
+		<crew-member number="4"></crew-member>
+		<crew-member number="5"></crew-member>
+		<crew-member number="6"></crew-member>
+		<crew-member number="7"></crew-member>
+		<crew-member number="8"></crew-member>
+		<crew-member number="9"></crew-member>
+		<crew-member number="10"></crew-member>
+	</div>
+</div>
+
+<div class="layout horizontal">
+	<paper-button raised class="flex indigo ssbm-crew-update">Update roster and show</paper-button>
+</div>
+<div class="layout horizontal">
+	<paper-button raised class="flex ssbm-crew-hide">Hide</paper-button>
+</div>
+
+<script src="js/crew-roster.js"></script>
+</body>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+	<script src="/bundles/latitude/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+	<script src="/bundles/latitude/bower_components/jquery/dist/jquery.min.js"></script>
+
+	<link rel="import" href="/bundles/latitude/bower_components/polymer/polymer.html">
+	<link rel="import" href="/bundles/latitude/bower_components/paper-input/paper-input.html">
+	<link rel="import" href="/bundles/latitude/bower_components/paper-input/paper-textarea.html">
+	<link rel="import" href="/bundles/latitude/bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+	<link rel="import" href="/bundles/latitude/bower_components/paper-menu/paper-menu.html">
+	<link rel="import" href="/bundles/latitude/bower_components/paper-item/paper-item.html">
+	<link rel="import" href="/bundles/latitude/bower_components/paper-button/paper-button.html">
+	<link rel="import" href="/bundles/latitude/bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+</head>
+
+<body>
+<style>
+paper-button.indigo {
+    background-color: #2D4E8A;
+    color: white;
+}
+</style>
+
+<div class="layout horizontal">
+	<div class="flex" style="padding-left: 5px">
+		<paper-textarea id="ssbm-third-top-text" label="Lower third top text"></paper-textarea>
+		<paper-textarea id="ssbm-third-bottom-text" label="Lower third bottom text"></paper-textarea>
+		<div class="layout horizontal">
+			<paper-button raised class="indigo ssbm-third-update flex-auto">Update</paper-button>
+			<paper-button raised class="indigo ssbm-third-update-anim flex-auto">w/ Animation</paper-button>
+		</div>
+	</div>
+</div>
+<script src="js/latitude.js"></script>
+</body>
+</html>
