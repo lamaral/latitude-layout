@@ -1,5 +1,5 @@
 {
-  "name": "latitude",
+  "name": "latitude-layout",
   "version": "0.0.0",
   "description": "Laboratório Latitude",
   "homepage": "",
@@ -20,22 +20,25 @@
   ],
   "nodecg": {
     "compatibleRange": "~0.9.0",
-    "dashboardPanels": [
-      {
-        "name": "lower-third",
-        "title": "Lower Third",
-        "width": 4,
-        "file": "lower-third.html",
-        "headerColor": "#2d4e8a"
-      }
-    ],
-    "graphics": [
-      {
-        "file": "lower-third.html",
-        "width": 1700,
-        "height": 250
-      }
-    ]
+    "dashboardPanels": [{
+      "name": "lower-third",
+      "title": "Lower Third",
+      "width": 4,
+      "file": "lower-third.html",
+      "headerColor": "#2d4e8a"
+    }],
+    "graphics": [{
+      "file": "lower-third.html",
+      "width": 1700,
+      "height": 250
+    }],
+    "assetCategories": [{
+      "name": "names",
+      "title": "Names",
+      "allowedTypes": [
+        "json"
+      ]
+    }]
   },
   "repository": "https://github.com/nodecg/nodecg.git",
   "private": true

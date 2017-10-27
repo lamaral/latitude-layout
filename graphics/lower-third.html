@@ -1,18 +1,21 @@
 <head>
-	<link href="css/lower-third.css" rel="stylesheet"/>
+	<link href="css/lower-third.css" rel="stylesheet" />
 
-	<script src="/bundles/latitude/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="/bundles/latitude-layout/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="js/lower-third.js"></script>
 </head>
+
 <body>
 	<script type="text/javascript">
 		WebFontConfig = {
-			google: { families: [ 'Oxygen::latin' ] }
+			google: {
+				families: ['Oxygen::latin']
+			}
 		};
 		(function() {
 			var wf = document.createElement('script');
 			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-			'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+				'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
 			wf.type = 'text/javascript';
 			wf.async = 'true';
 			var s = document.getElementsByTagName('script')[0];
@@ -21,7 +24,7 @@
 	</script>
 	<div id="container">
 		<div id="logocontainer">
-			<div id="logo"><span class="helper"></span><img src="img/logo.png"/></div>
+			<div id="logo"><span class="helper"></span><img src="img/logo.png" /></div>
 		</div>
 		<div id="lowerthirdcontainer">
 			<div id="lowerthird">
