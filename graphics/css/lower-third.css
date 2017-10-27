@@ -24,19 +24,20 @@ body {
 }
 
 #logocontainer {
-				width: 300px;
-				height: 230px;
+				width: 299px;
+				height: 250px;
 				background: url('../img/backgrounds/logo-background.png');
 				position: absolute;
 				top: 0%;
 				z-index: 1;
+        left: -100%;
 }
 
 #logo {
-				margin-left: 30px;
-				margin-top: 55px;
-				width: 200px;
-				height: 120px;
+				margin-left: 20px;
+				margin-top: 20px;
+				width: 173px;
+				height: 173px;
 }
 
 .helper {
@@ -61,7 +62,7 @@ body {
 
 #lowerthird {
 				width: 1650px;
-				height: 230px;
+				height: 170px;
 				background: url('../img/backgrounds/lower-third-background.png');
 				/*background-position: 36px;*/
 				/*background: -moz-linear-gradient(left, #ededee 0%, #9e9e9f 100%);
@@ -76,8 +77,8 @@ body {
 
 #lowerthirdtoptext {
 				width: 1650px;
-				padding: 75px 0 5px 240px;
-				font-size: 3em;
+				padding: 15px 0 25px 280px;
+				font-size: 3.5em;
 				color: #FFF;
 }
 
@@ -91,7 +92,7 @@ body {
 
 #lowerthirdbottomtext {
 				width: 1650px;
-				padding: 10px 0 0 240px;
-				font-size: 1.5em;
+				padding: 5px 0 0 280px;
+				font-size: 2em;
 				color: #CCC;
 }
