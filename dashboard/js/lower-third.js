@@ -4,15 +4,28 @@
 	window.addEventListener('WebComponentsReady', function(e) {
 		var $lowerThirdHide = $('.latitude-third-hide');
 		var $lowerThirdUpdate = $('.latitude-third-update');
-    var namesReplicant = nodecg.Replicant('assets:names');
-    var names;
+		var assetNamesReplicant = nodecg.Replicant('assets:names');
+		var files;
+		var names;
 
-    namesReplicant.on('change', function(newValue, oldValue) {
-			names = newValue;
-			console.log(names[0].url);
-    });
+		assetNamesReplicant.on('change', function(newValue, oldValue) {
+			files = newValue;
+			if (files.length > 0) {
+				$.getJSON(files[0].url, function(json) {
+					names = json;
+					$('#nomes').empty();
+					names.forEach(function(name, idx) {
+						var element = '<paper-item><paper-item-body two-line><div>' + name.topline + '</div><div secondary>' + name.bottomline + '</div></paper-item-body><paper-button raised class="indigo load-button" style="margin-left: auto; margin-right: 0;" data-id="' + idx + '">Load</paper-button></paper-item>';
+						$('#nomes').append(element);
+					});
+					$('.load-button').click(function() {
+						loadData($(this).data('id'));
+					});
+				});
+			}
+		});
 
-    $lowerThirdHide.click(function() {
+		$lowerThirdHide.click(function() {
 			nodecg.sendMessage('lowerThirdHide', lowerThirdData());
 		});
 
@@ -25,6 +38,11 @@
 				'top': $('#latitude-third-top-text').val(),
 				'bottom': $('#latitude-third-bottom-text').val()
 			}
+		}
+
+		function loadData(id) {
+			$('#latitude-third-top-text').val(names[id].topline);
+			$('#latitude-third-bottom-text').val(names[id].bottomline);
 		}
 	});
 })();

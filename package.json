@@ -23,9 +23,9 @@
     "dashboardPanels": [{
       "name": "lower-third",
       "title": "Lower Third",
-      "width": 4,
       "file": "lower-third.html",
-      "headerColor": "#2d4e8a"
+      "headerColor": "#2d4e8a",
+      "fullbleed": true
     }],
     "graphics": [{
       "file": "lower-third.html",

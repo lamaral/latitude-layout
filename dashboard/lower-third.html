@@ -3,14 +3,20 @@
 	<script src="/bundles/latitude-layout/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 	<script src="/bundles/latitude-layout/bower_components/jquery/dist/jquery.min.js"></script>
 
+	<link rel="stylesheet" href="/bundles/latitude-layout/dashboard/css/lower-third.css">
+
 	<link rel="import" href="/bundles/latitude-layout/bower_components/polymer/polymer.html">
 	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-input/paper-input.html">
 	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-input/paper-textarea.html">
 	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
 	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-menu/paper-menu.html">
 	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-item/paper-item.html">
+	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-item/paper-item-shared-styles.html">
 	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-button/paper-button.html">
-	<link rel="import" href="/bundles/latitude-layout/bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+	<link rel="import" href="/bundles/latitude-layout/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+	<style is="custom-style" include="iron-flex"></style>
+	<style is="custom-style" include="paper-item-shared-styles"></style>
 </head>
 
 <body>
@@ -29,6 +35,16 @@ paper-button.indigo {
 			<paper-button raised class="indigo latitude-third-hide flex-auto">Hide</paper-button>
 			<paper-button raised class="indigo latitude-third-update flex-auto">Update & Show</paper-button>
 		</div>
+	</div>
+
+	<div id="nomes" role="listbox" class="flex">
+		<!-- <paper-item>
+		  <paper-item-body two-line>
+		    <div>Show your status</div>
+		    <div secondary>Your status is visible to everyone</div>
+		  </paper-item-body>
+		  <paper-button raised class="indigo teste" style="margin-left: auto; margin-right: 0;" data-id="0">Load</paper-button>
+		</paper-item> -->
 	</div>
 </div>
 <script src="js/lower-third.js"></script>
