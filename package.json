@@ -26,11 +26,23 @@
       "file": "lower-third.html",
       "headerColor": "#2d4e8a",
       "fullbleed": true
+    },
+    {
+      "name": "countdown",
+      "title": "Countdown",
+      "file": "countdown.html",
+      "headerColor": "#2d4e8a",
+      "width": 4
     }],
     "graphics": [{
       "file": "lower-third.html",
       "width": 1700,
       "height": 250
+    },
+    {
+      "file": "countdown.html",
+      "width": 265,
+      "height": 105
     }],
     "assetCategories": [{
       "name": "names",
@@ -40,6 +52,6 @@
       ]
     }]
   },
-  "repository": "https://github.com/nodecg/nodecg.git",
+  "repository": "https://github.com/lamaral/latitude-layout.git",
   "private": true
 }

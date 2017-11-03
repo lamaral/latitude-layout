@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Countdown</title>
+	<script src="../bower_components/gsap/src/minified/TweenMax.min.js"></script>
+	<style is="custom-style">
+		body {
+			font-family: 'Arial', sans-serif;
+		}
+
+		#container {
+			width: 265px;
+			height: 105px;
+		}
+
+		#countdown {
+			font-size: 90px;
+			font-family: 'Arial', sans-serif;
+			font-weight: 700;
+			color: #00ff00;
+			left: 0px;
+			top: 0px;
+			width: 265px;
+			letter-spacing: 0.075em;
+			display: flex;
+			justify-content: center;
+		}
+
+		#countdown,
+		#nowPlaying {
+			text-align: center;
+			white-space: nowrap;
+			position: absolute;
+			transform-origin: left;
+		}
+	</style>
+</head>
+<body>
+<div id="container">
+	<div id="countdown">
+		<div id="countdownMinutes"></div>
+		<div id="countdownColon">:</div>
+		<div id="countdownSeconds"></div>
+	</div>
+</div>
+<script src="js/countdown.js"></script>
+</body>
+</html>
