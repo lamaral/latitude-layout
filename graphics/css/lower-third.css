@@ -57,7 +57,7 @@ body {
 				height: 230px;
 				position: absolute;
 				top: 0%;
-				left: -100%;
+				left: -0%;
 }
 
 #lowerthird {
@@ -72,14 +72,17 @@ body {
 				top: 50%;
 				left: 1%;
 				transform: translateY(-50%);
-				font-family: 'Oxygen', helvetica, arial;
+				/*font-family: 'Oxygen', helvetica, arial;*/
+				font-family: 'Arial', sans-serif;
 }
 
 #lowerthirdtoptext {
 				width: 1650px;
-				padding: 15px 0 25px 280px;
-				font-size: 3.5em;
+				padding: 10px 0 0px 280px;
+				font-size: 4.5em;
+				font-weight: bold;
 				color: #FFF;
+				text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 #lowerthirddivider {
@@ -92,7 +95,8 @@ body {
 
 #lowerthirdbottomtext {
 				width: 1650px;
-				padding: 5px 0 0 280px;
-				font-size: 2em;
+				padding: 16px 0 0 280px;
+				font-size: 2.5em;
 				color: #CCC;
+				text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
