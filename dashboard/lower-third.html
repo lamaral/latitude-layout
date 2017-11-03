@@ -14,6 +14,9 @@
 	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-item/paper-item-shared-styles.html">
 	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-button/paper-button.html">
 	<link rel="import" href="/bundles/latitude-layout/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+	<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+	<link rel="import" href="../bower_components/iron-icons/editor-icons.html">
+	<link rel="import" href="../bower_components/iron-icons/av-icons.html">
 
 	<style is="custom-style" include="iron-flex"></style>
 	<style is="custom-style" include="paper-item-shared-styles"></style>
@@ -25,9 +28,29 @@ paper-button.indigo {
     background-color: #2D4E8A;
     color: white;
 }
+paper-button.green {
+		background-color: #43ac6a;
+		color: white;
+}
+paper-button.red {
+		background-color: #C9513E;
+		color: white;
+}
 </style>
 
 <div class="layout horizontal">
+	<div id="nomes" role="listbox" class="flex">
+		<!-- <paper-item class="nome">
+			<paper-item-body two-line>
+				<div>' + name.topline + '</div>
+				<div secondary>' + name.bottomline + '</div>
+			</paper-item-body>
+			<paper-button raised class="green load-button" style="margin-left: auto; margin-right: 0;" data-id="' + idx + '">
+				<iron-icon icon="av:play-arrow" title="Start/Resume All"></iron-icon>
+				&nbsp;Load
+			</paper-button>
+		</paper-item> -->
+	</div>
 	<div class="flex" style="padding-left: 5px">
 		<paper-textarea id="latitude-third-top-text" label="Lower third top text"></paper-textarea>
 		<paper-textarea id="latitude-third-bottom-text" label="Lower third bottom text"></paper-textarea>
@@ -35,16 +58,6 @@ paper-button.indigo {
 			<paper-button raised class="indigo latitude-third-hide flex-auto">Hide</paper-button>
 			<paper-button raised class="indigo latitude-third-update flex-auto">Update & Show</paper-button>
 		</div>
-	</div>
-
-	<div id="nomes" role="listbox" class="flex">
-		<!-- <paper-item>
-		  <paper-item-body two-line>
-		    <div>Show your status</div>
-		    <div secondary>Your status is visible to everyone</div>
-		  </paper-item-body>
-		  <paper-button raised class="indigo teste" style="margin-left: auto; margin-right: 0;" data-id="0">Load</paper-button>
-		</paper-item> -->
 	</div>
 </div>
 <script src="js/lower-third.js"></script>

@@ -15,7 +15,7 @@
 					names = json;
 					$('#nomes').empty();
 					names.forEach(function(name, idx) {
-						var element = '<paper-item><paper-item-body two-line><div>' + name.topline + '</div><div secondary>' + name.bottomline + '</div></paper-item-body><paper-button raised class="indigo load-button" style="margin-left: auto; margin-right: 0;" data-id="' + idx + '">Load</paper-button></paper-item>';
+						var element = '<paper-item class="nome"><paper-item-body two-line><div>' + name.topline + '</div><div secondary>' + name.bottomline + '</div></paper-item-body><paper-button raised class="green load-button" style="margin-left: auto; margin-right: 0;" data-id="' + idx + '">Load&nbsp;<iron-icon icon="av:play-arrow" title="Load"></iron-icon></paper-button></paper-item>';
 						$('#nomes').append(element);
 					});
 					$('.load-button').click(function() {
