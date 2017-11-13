@@ -1,0 +1,43 @@
+@font-face {
+				font-family: 'OswaldRegular';
+				src: url('img/fonts/Oswald-Regular.eot');
+				src: url('img/fonts/Oswald-Regular.ttf') format('truetype');
+				font-weight: normal;
+				font-style: normal;
+}
+
+@font-face {
+				font-family: 'OswaldBold';
+				src: url('img/fonts/Oswald-Bold.eot');
+				src: url('img/fonts/Oswald-Bold.ttf') format('truetype');
+				font-weight: normal;
+				font-style: normal;
+}
+
+body {
+				overflow: hidden;
+				margin: 0px;
+}
+
+#container {
+				width: 1920px;
+				height: 61px;
+				background: url('../img/backgrounds/top-message.png');
+				position: absolute;
+				top: -100%;
+				/*z-index: 1;*/
+				font-family: 'Arial', sans-serif;
+}
+
+#topmessagetext {
+				width: 1900px;
+				height: 50px;
+				/*padding: 0px 35px 0px 35px;*/
+				/*font-size: 2.5em;*/
+				font-weight: bold;
+				color: #FFF;
+				text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+				/*text-align: center;
+				white-space: nowrap;
+  			overflow: hidden;*/
+}

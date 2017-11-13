@@ -3,10 +3,18 @@
 
 	window.addEventListener('WebComponentsReady', function(e) {
 		var $lowerThirdHide = $('.latitude-third-hide');
-		var $lowerThirdUpdate = $('.latitude-third-update');
+		var $lowerThirdUpdate = $('.latitude-third-update-show');
+		var stopwatch = $('#stopwatch');
 		var assetNamesReplicant = nodecg.Replicant('assets:names');
+		var lowerThirdTimer = nodecg.Replicant('lower-third-timer');
 		var files;
 		var names;
+
+		lowerThirdTimer.on('change', function(newValue, oldValue) {
+			var m = newValue.minutes;
+			var s = newValue.seconds;
+			stopwatch.html((m < 10 ? `0${m}` : m)+":"+(s < 10 ? `0${s}` : s));
+		});
 
 		assetNamesReplicant.on('change', function(newValue, oldValue) {
 			files = newValue;

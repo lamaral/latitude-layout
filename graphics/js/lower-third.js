@@ -4,21 +4,22 @@ $(function () {
   nodecg.listenFor('lowerThirdHide', hide);
 	nodecg.listenFor('lowerThirdUpdate', update);
 
-	function hide(data) {
+  this.timer = null;
 
+	function hide(data) {
+    clearTimeout(this.timer);
+    $('#lowerthirdcontainer').animate({left: "-100%"}, {duration: 800, complete: function() {
+      $('#logocontainer').animate({left: "-100%"}, 800);
+    }});
 	}
 
 	function update(data) {
     $('#lowerthirdtoptext').text(data.top);
 		$('#lowerthirdbottomtext').text(data.bottom);
 		$('#logocontainer').animate({left: "0%"}, {duration: 800, complete: function() {
-      console.log('open lower container');
       $('#lowerthirdcontainer').animate({left: "0%"}, {duration: 800, complete: function() {
-        console.log('interval')
-        setTimeout(function() {
-            console.log('close third container')
+        this.timer = setTimeout(function() {
             $('#lowerthirdcontainer').animate({left: "-100%"}, {duration: 800, complete: function() {
-              console.log('close logo container')
               $('#logocontainer').animate({left: "-100%"}, 800);
             }});
         }, 5000);
