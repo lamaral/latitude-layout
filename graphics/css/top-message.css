@@ -22,7 +22,8 @@ body {
 #container {
 				width: 1920px;
 				height: 61px;
-				background: url('../img/backgrounds/top-message.png');
+/*				background: url('../img/backgrounds/top-message.png');*/
+                background-color: #74CB86;
 				position: absolute;
 				top: -100%;
 				/*z-index: 1;*/
@@ -32,7 +33,7 @@ body {
 #topmessagetext {
 				width: 1900px;
 				height: 50px;
-				/*padding: 0px 35px 0px 35px;*/
+				padding-top: 15px;
 				/*font-size: 2.5em;*/
 				font-weight: bold;
 				color: #FFF;

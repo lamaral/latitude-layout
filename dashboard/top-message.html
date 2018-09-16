@@ -1,70 +1,30 @@
 <!DOCTYPE html>
-<head>
-	<script src="/bundles/latitude-layout/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-	<script src="/bundles/latitude-layout/bower_components/jquery/dist/jquery.min.js"></script>
+<html>
+    <head>
+        <link rel="stylesheet" href="/bundles/latitude-layout/dashboard/css/top-message.css">
+        <link rel="stylesheet" href="/bundles/latitude-layout/node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/bundles/latitude-layout/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    </head>
 
-	<link rel="stylesheet" href="/bundles/latitude-layout/dashboard/css/top-message.css">
-
-	<link rel="import" href="/bundles/latitude-layout/bower_components/polymer/polymer.html">
-	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-input/paper-input.html">
-	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-input/paper-textarea.html">
-	<!-- <link rel="import" href="/bundles/latitude-layout/bower_components/paper-dropdown-menu/paper-dropdown-menu.html"> -->
-	<!-- <link rel="import" href="/bundles/latitude-layout/bower_components/paper-menu/paper-menu.html"> -->
-	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-item/paper-item.html">
-	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-item/paper-item-body.html">
-	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-item/paper-item-shared-styles.html">
-	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-button/paper-button.html">
-	<link rel="import" href="/bundles/latitude-layout/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
-	<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
-	<link rel="import" href="../bower_components/iron-icons/av-icons.html">
-	<link rel="import" href="../bower_components/iron-icons/image-icons.html">
-
-	<style is="custom-style" include="iron-flex"></style>
-	<style is="custom-style" include="paper-item-shared-styles"></style>
-</head>
-
-<body>
-<style>
-paper-button.indigo {
-    background-color: #2D4E8A;
-    color: white;
-}
-paper-button.green {
-		background-color: #43ac6a;
-		color: white;
-}
-paper-button.red {
-		background-color: #C9513E;
-		color: white;
-}
-paper-button.orange {
-		background-color: #F39C12;
-		color: white;
-}
-</style>
-
-<div class="layout horizontal">
-	<div id="messages" role="listbox" class="flex">
-		<!-- <paper-item class="nome">
-			<paper-item-body two-line>
-				<div>' + name.topline + '</div>
-				<div secondary>' + name.bottomline + '</div>
-			</paper-item-body>
-			<paper-button raised class="green load-button" style="margin-left: auto; margin-right: 0;" data-id="' + idx + '">
-				<iron-icon icon="av:play-arrow" title="Start/Resume All"></iron-icon>
-				&nbsp;Load
-			</paper-button>
-		</paper-item> -->
-	</div>
-	<div class="flex" style="padding-left: 5px">
-		<paper-textarea id="top-message-text" label="Top message text"></paper-textarea>
-		<div class="layout horizontal">
-			<paper-button raised class="red latitude-message-hide flex-auto">Hide&nbsp;&nbsp;&nbsp;<iron-icon icon="icons:clear" title="Hide"></iron-icon></paper-button>
-			<paper-button raised class="orange latitude-message-update flex-auto">Update&nbsp;&nbsp;&nbsp;<iron-icon icon="av:loop" title="Update"></iron-icon></paper-button>
-			<paper-button raised class="orange latitude-message-update-show flex-auto">Update & Show&nbsp;&nbsp;&nbsp;<iron-icon icon="image:remove-red-eye" title="Update & Show"></iron-icon></paper-button>
-		</div>
-	</div>
-</div>
-<script src="js/top-message.js"></script>
-</body>
+    <body>
+        <div class="container-fluid">
+            <div id="messages" class="list-group mb-3">
+            </div>
+            <div class="mb-3">
+                <label for="top-message-text">Top message text</label>
+                <input id="top-message-text" class="form-control" type="text" placeholder="Título que aparece em cima">
+            </div>
+            <div class="mb-3">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-danger latitude-message-hide"><i class="fas fa-eye-slash"></i>&nbsp;&nbsp;&nbsp;Hide</button>
+                    <button type="button" class="btn btn-warning latitude-message-update"><i class="fas fa-sync-alt"></i>&nbsp;&nbsp;&nbsp;Update</button>
+                    <button type="button" class="btn btn-warning latitude-message-update-show"><i class="fas fa-eye"></i>&nbsp;&nbsp;&nbsp;Update & Show</button>
+                </div>
+            </div>
+        </div>
+        <script src="/bundles/latitude-layout/node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="/bundles/latitude-layout/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/bundles/latitude-layout/node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+        <script src="js/top-message.js"></script>
+    </body>
 </html>

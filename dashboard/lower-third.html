@@ -1,72 +1,38 @@
 <!DOCTYPE html>
-<head>
-	<script src="/bundles/latitude-layout/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-	<script src="/bundles/latitude-layout/bower_components/jquery/dist/jquery.min.js"></script>
+<html>
+    <head>
+        <link rel="stylesheet" href="/bundles/latitude-layout/dashboard/css/lower-third.css">
+        <link rel="stylesheet" href="/bundles/latitude-layout/node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/bundles/latitude-layout/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    </head>
 
-	<link rel="stylesheet" href="/bundles/latitude-layout/dashboard/css/lower-third.css">
-
-	<link rel="import" href="/bundles/latitude-layout/bower_components/polymer/polymer.html">
-	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-input/paper-input.html">
-	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-input/paper-textarea.html">
-	<!-- <link rel="import" href="/bundles/latitude-layout/bower_components/paper-dropdown-menu/paper-dropdown-menu.html"> -->
-	<!-- <link rel="import" href="/bundles/latitude-layout/bower_components/paper-menu/paper-menu.html"> -->
-	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-item/paper-item.html">
-	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-item/paper-item-body.html">
-	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-item/paper-item-shared-styles.html">
-	<link rel="import" href="/bundles/latitude-layout/bower_components/paper-button/paper-button.html">
-	<link rel="import" href="/bundles/latitude-layout/bower_components/iron-flex-layout/iron-flex-layout-classes.html">
-	<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
-	<link rel="import" href="../bower_components/iron-icons/av-icons.html">
-	<link rel="import" href="../bower_components/iron-icons/image-icons.html">
-	<link rel="import" href="elements/time-input/time-input.html">
-
-	<style is="custom-style" include="iron-flex"></style>
-	<style is="custom-style" include="paper-item-shared-styles"></style>
-</head>
-
-<body>
-<style>
-paper-button.indigo {
-    background-color: #2D4E8A;
-    color: white;
-}
-paper-button.green {
-		background-color: #43ac6a;
-		color: white;
-}
-paper-button.red {
-		background-color: #C9513E;
-		color: white;
-}
-paper-button.orange {
-		background-color: #F39C12;
-		color: white;
-}
-</style>
-
-<div class="layout horizontal">
-	<div id="nomes" role="listbox" class="flex">
-		<!-- <paper-item class="nome">
-			<paper-item-body two-line>
-				<div>' + name.topline + '</div>
-				<div secondary>' + name.bottomline + '</div>
-			</paper-item-body>
-			<paper-button raised class="green load-button" style="margin-left: auto; margin-right: 0;" data-id="' + idx + '">
-				<iron-icon icon="av:play-arrow" title="Start/Resume All"></iron-icon>
-				&nbsp;Load
-			</paper-button>
-		</paper-item> -->
-	</div>
-	<div class="flex" style="padding-left: 5px">
-		<paper-textarea id="latitude-third-top-text" label="Lower third top text"></paper-textarea>
-		<paper-textarea id="latitude-third-bottom-text" label="Lower third bottom text"></paper-textarea>
-		<p>Time since last appearance: <div id="stopwatch"></div></p>
-		<div class="layout horizontal">
-			<paper-button raised class="red latitude-third-hide flex-auto">Hide&nbsp;&nbsp;&nbsp;<iron-icon icon="icons:clear" title="Hide"></iron-icon></paper-button>
-			<paper-button raised class="orange latitude-third-update-show flex-auto">Update & Show&nbsp;&nbsp;&nbsp;<iron-icon icon="image:remove-red-eye" title="Update & Show"></iron-icon></paper-button>
-		</div>
-	</div>
-</div>
-<script src="js/lower-third.js"></script>
-</body>
+    <body>
+        <div class="container-fluid">
+            <div class="list-group mb-3" id="nomes">
+            </div>
+            <div class="mb-3">
+                <label for="latitude-third-top-text">Lower third top text</label>
+                <input id="latitude-third-top-text" class="form-control" type="text" placeholder="Professor Fulano de Tal">
+            </div>
+            <div class="mb-3">
+                <label for="latitude-third-bottom-text">Lower third bottom text</label>
+                <input id="latitude-third-bottom-text" class="form-control" type="text" placeholder="Universidade Placeholder">
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-danger latitude-third-hide"><i class="fas fa-eye-slash"></i>&nbsp;&nbsp;&nbsp;Hide</button>
+                        <button type="button" class="btn btn-warning latitude-third-update-show"><i class="fas fa-eye"></i>&nbsp;&nbsp;&nbsp;Update & Show</button>
+                    </div>
+                </div>
+                <div class="col-md-8 align-self-center">
+                    <span>Time since last appearance: <span id="stopwatch"></span></span>
+                </div>
+            </div>
+        </div>
+        <script src="/bundles/latitude-layout/node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="/bundles/latitude-layout/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/bundles/latitude-layout/node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+        <script src="js/lower-third.js"></script>
+    </body>
 </html>
