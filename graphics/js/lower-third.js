@@ -2,7 +2,7 @@
 
 $(function () {
   nodecg.listenFor('lowerThirdHide', hide);
-	nodecg.listenFor('lowerThirdUpdate', update);
+  nodecg.listenFor('lowerThirdUpdate', update);
 
   this.timer = null;
 

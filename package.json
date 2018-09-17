@@ -33,7 +33,7 @@
         "title": "OBS",
         "file": "obs.html",
         "headerColor": "#2d4e8a",
-        "width": 4
+        "fullbleed": true
       },
       {
         "name": "top-message",
@@ -63,14 +63,21 @@
     "assetCategories": [
       {
         "name": "names",
-        "title": "Names",
+        "title": "Lower-third Names",
         "allowedTypes": [
           "json"
         ]
       },
       {
         "name": "messages",
-        "title": "Messages",
+        "title": "Top Messages",
+        "allowedTypes": [
+          "json"
+        ]
+      },
+      {
+        "name": "keys",
+        "title": "Stream Keys",
         "allowedTypes": [
           "json"
         ]

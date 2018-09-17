@@ -1,16 +1,80 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-	<script src="../bower_components/webcomponentsjs/webcomponents-loader.js"></script>
-	<link rel="import" href="../bower_components/nodecg-widget-obs/nodecg-widget-obs.html">
-	<style>
-		body {
-			margin: 0;
-		}
-	</style>
-</head>
-<body>
-	<nodecg-widget-obs></nodecg-widget-obs>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/bundles/latitude-layout/dashboard/css/lower-third.css">
+        <link rel="stylesheet" href="/bundles/latitude-layout/node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/bundles/latitude-layout/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+        <style>
+            .card {
+            color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row mb-3">
+                <div class="list-group mb-3 col-md-6 order-md-2" id="keys">
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <div class="card">
+                        <div class="card-header">
+                            OBS Stream Settings
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="streaming-key">Streaming key</label>
+                                <input id="streaming-key" class="form-control" type="text" placeholder="OBS Streaming Key">
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-danger" id="stop-stream"><i class="fas fa-stop"></i>&nbsp;&nbsp;&nbsp;Stop Stream</button>
+                                <button type="button" class="btn btn-warning" id="update-key"><i class="fas fa-retweet"></i>&nbsp;&nbsp;&nbsp;Update Key</button>
+                                <button type="button" class="btn btn-success" id="start-stream"><i class="fas fa-play"></i>&nbsp;&nbsp;&nbsp;Start Stream</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            OBS Websocket Connection
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-8 form-group">
+                                    <label for="hostname">Hostname</label>
+                                    <input id="hostname" class="form-control" type="text" value="localhost">
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label for="port">Port</label>
+                                    <input id="port" class="form-control" type="numeric" value="4444">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 form-group">
+                                    <label for="port">Password</label>
+                                    <input id="password" class="form-control" type="password" placeholder="Password">
+                                </div>
+                                <div class="col-md-4 align-self-center">
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-success" id="connect"><i class="fas fa-wifi"></i>&nbsp;&nbsp;&nbsp;Connect</button>
+                                        <button type="button" class="btn btn-danger" id="disconnect"><i class="fas fa-times"></i>&nbsp;&nbsp;&nbsp;Disconnect</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/bundles/latitude-layout/node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="/bundles/latitude-layout/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/bundles/latitude-layout/node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+        <script src="js/obs.js"></script>
+    </body>
 </html>
+

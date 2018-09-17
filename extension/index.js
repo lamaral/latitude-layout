@@ -1,8 +1,7 @@
 'use strict';
 
-// Packages
-const OBSUtility = require('nodecg-utility-obs');
-
+//const OBSUtility = require('./obs');
+//const OBSUtility = require('nodecg-utility-obs');
 
 module.exports = function (nodecg) {
 	try {
@@ -12,5 +11,13 @@ module.exports = function (nodecg) {
 		process.exit(1);
 	}
     
-    const obs = new OBSUtility(nodecg);
+    try {
+		const OBSUtility = require('./obs');
+        const obs = new OBSUtility(nodecg);
+	} catch (e) {
+		nodecg.log.error('Failed to load "obs" lib:', e.stack);
+		process.exit(1);
+	}
+    
+    
 };
